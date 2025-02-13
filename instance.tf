@@ -42,7 +42,10 @@ resource "google_compute_instance_template" "instance_template" {
   lifecycle {
     create_before_destroy = false
   }
-
+  scheduling {
+    automatic_restart   = true
+    on_host_maintenance = "MIGRATE"
+  }
   depends_on = [random_string.random]
 }
 
