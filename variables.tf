@@ -53,6 +53,12 @@ variable "network" {
   default     = "retigazer-network"
 }
 
+variable "subnetwork" {
+  description = "Name of the subnetwork to use for the VM"
+  type        = string
+  default     = "default"
+}
+
 variable "region" {
   description = "The region in which to create the resources"
   type        = string

@@ -22,6 +22,7 @@ resource "google_compute_instance_template" "instance_template" {
   // networking
   network_interface {
     network = var.network
+    subnetwork = var.subnetwork
     access_config {}
   }
 
